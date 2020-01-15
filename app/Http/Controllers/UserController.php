@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Session;
 
 
-$GLOBALS['url_api'] = "http://lignebleue.sytes.net:8080/api/";
+$GLOBALS['url_api'] = "http://lignebleue.ddns.net:8080/api/";
 
 class UserController extends Controller
 {
