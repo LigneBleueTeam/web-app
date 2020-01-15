@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-$GLOBALS['url_api'] = "http://lignebleue.sytes.net:8080/api/";
+$GLOBALS['url_api'] = "http://lignebleue.ddns.net:8080/api/";
 
 
 class ProgramController extends Controller
