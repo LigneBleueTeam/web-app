@@ -51,7 +51,7 @@ class Controller extends BaseController
             $request->session()->push('userId', $userId);
             $request->session()->push('firstName', $firstName);
             $request->session()->push('lastName', $lastName);
-            return redirect()->route('users');
+            return redirect()->route('home');
         } else{
             // password not correct
             return view('login')->with('erreur', 'Le mot de passe est incorrect.');
