@@ -17,7 +17,9 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function actionlogin(Request $request){
-        
+        if ($request->session()->has('userId')) {
+            return redirect()->route('home');
+        }
         $json = file_get_contents($GLOBALS['url_api'] . 'user/all');
         $data = json_decode($json);
         $password = '';
@@ -81,6 +83,12 @@ class Controller extends BaseController
         } else{
             return redirect()->route('login');
         }
+    }
+
+    public function logout(Request $request){
+        $request->session()->forget('userId');
+        $request->session()->flush();
+        return redirect()->route('login');
     }
 
 }
