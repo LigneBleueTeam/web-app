@@ -109,17 +109,21 @@
                       {{ $data['lastuser1']->height }} cm
                 </td>
                 <td>
-                     @if($data['lastuser1']->weight > 95)
+
+                @if( ($data['lastuser1']->weight/($data['lastuser1']->height * $data['lastuser1']->height)) > 0.0035 )
                       <span class="badge bg-danger">{{ $data['lastuser1']->weight }} kg</span>
-                      @elseif($data['lastuser1']->weight > 85)
+                      @elseif( ($data['lastuser1']->weight/($data['lastuser2']->height * $data['lastuser1']->height)) > 0.0030)
                       <span class="badge bg-warning">{{ $data['lastuser1']->weight }} kg</span>
-                      @elseif($data['lastuser1']->weight > 75)
-                      <span class="badge bg-primary">{{ $data['lastuser1']->weight }} kg</span>
-                      @elseif($data['lastuser1']->weight > 65)
+                      @elseif(($data['lastuser1']->weight/($data['lastuser1']->height * $data['lastuser1']->height)) > 0.0023)
                       <span class="badge bg-success">{{ $data['lastuser1']->weight }} kg</span>
-                      @elseif($data['lastuser1']->weight < 65)
+                      @elseif(($data['lastuser1']->weight/($data['lastuser1']->height * $data['lastuser1']->height)) > 0.0018)
+                      <span class="badge bg-primary">{{ $data['lastuser1']->weight }} kg</span>
+                      @elseif(($data['lastuser1']->weight/($data['lastuser1']->height * $data['lastuser1']->height)) > 0.0016)
                       <span class="badge bg-secondary">{{ $data['lastuser1']->weight }} kg</span>
+                      @else
+                      erreur
                       @endif
+
                 </td>
               </tr>
               <tr>
@@ -138,17 +142,21 @@
                       {{ $data['lastuser2']->height }} cm
                 </td>
                 <td>
-                     @if($data['lastuser2']->weight > 95)
+
+                @if( ($data['lastuser2']->weight/($data['lastuser2']->height * $data['lastuser2']->height)) > 0.0035 )
                       <span class="badge bg-danger">{{ $data['lastuser2']->weight }} kg</span>
-                      @elseif($data['lastuser2']->weight > 85)
+                      @elseif( ($data['lastuser2']->weight/($data['lastuser2']->height * $data['lastuser2']->height)) > 0.0030)
                       <span class="badge bg-warning">{{ $data['lastuser2']->weight }} kg</span>
-                      @elseif($data['lastuser2']->weight > 75)
-                      <span class="badge bg-primary">{{ $data['lastuser2']->weight }} kg</span>
-                      @elseif($data['lastuser2']->weight > 65)
+                      @elseif(($data['lastuser2']->weight/($data['lastuser2']->height * $data['lastuser2']->height)) > 0.0023)
                       <span class="badge bg-success">{{ $data['lastuser2']->weight }} kg</span>
-                      @elseif($data['lastuser2']->weight < 65)
+                      @elseif(($data['lastuser2']->weight/($data['lastuser2']->height * $data['lastuser2']->height)) > 0.0018)
+                      <span class="badge bg-primary">{{ $data['lastuser2']->weight }} kg</span>
+                      @elseif(($data['lastuser2']->weight/($data['lastuser2']->height * $data['lastuser2']->height)) > 0.0016)
                       <span class="badge bg-secondary">{{ $data['lastuser2']->weight }} kg</span>
+                      @else
+                      erreur
                       @endif
+
                 </td>
               </tr>
               <tr>
@@ -167,17 +175,20 @@
                       {{ $data['lastuser3']->height }} cm
                 </td>
                 <td>
-                     @if($data['lastuser3']->weight > 95)
+                      @if( ($data['lastuser3']->weight/($data['lastuser3']->height * $data['lastuser3']->height)) > 0.0035 )
                       <span class="badge bg-danger">{{ $data['lastuser3']->weight }} kg</span>
-                      @elseif($data['lastuser3']->weight > 85)
+                      @elseif( ($data['lastuser3']->weight/($data['lastuser3']->height * $data['lastuser3']->height)) > 0.0030)
                       <span class="badge bg-warning">{{ $data['lastuser3']->weight }} kg</span>
-                      @elseif($data['lastuser3']->weight > 75)
-                      <span class="badge bg-primary">{{ $data['lastuser3']->weight }} kg</span>
-                      @elseif($data['lastuser3']->weight > 65)
+                      @elseif(($data['lastuser3']->weight/($data['lastuser3']->height * $data['lastuser3']->height)) > 0.0023)
                       <span class="badge bg-success">{{ $data['lastuser3']->weight }} kg</span>
-                      @elseif($data['lastuser3']->weight < 65)
+                      @elseif(($data['lastuser3']->weight/($data['lastuser3']->height * $data['lastuser3']->height)) > 0.0018)
+                      <span class="badge bg-primary">{{ $data['lastuser3']->weight }} kg</span>
+                      @elseif(($data['lastuser3']->weight/($data['lastuser3']->height * $data['lastuser3']->height)) > 0.0016)
                       <span class="badge bg-secondary">{{ $data['lastuser3']->weight }} kg</span>
+                      @else
+                      erreur
                       @endif
+
                 </td>
               </tr>
               <tr>
@@ -196,17 +207,20 @@
                       {{ $data['lastuser4']->height }} cm
                 </td>
                 <td>
-                     @if($data['lastuser4']->weight > 95)
+                      @if( ($data['lastuser4']->weight/($data['lastuser4']->height * $data['lastuser4']->height)) > 0.0035 )
                       <span class="badge bg-danger">{{ $data['lastuser4']->weight }} kg</span>
-                      @elseif($data['lastuser4']->weight > 85)
+                      @elseif( ($data['lastuser4']->weight/($data['lastuser4']->height * $data['lastuser4']->height)) > 0.0030)
                       <span class="badge bg-warning">{{ $data['lastuser4']->weight }} kg</span>
-                      @elseif($data['lastuser4']->weight > 75)
-                      <span class="badge bg-primary">{{ $data['lastuser4']->weight }} kg</span>
-                      @elseif($data['lastuser4']->weight > 65)
+                      @elseif(($data['lastuser4']->weight/($data['lastuser4']->height * $data['lastuser4']->height)) > 0.0023)
                       <span class="badge bg-success">{{ $data['lastuser4']->weight }} kg</span>
-                      @elseif($data['lastuser4']->weight < 65)
+                      @elseif(($data['lastuser4']->weight/($data['lastuser4']->height * $data['lastuser4']->height)) > 0.0018)
+                      <span class="badge bg-primary">{{ $data['lastuser4']->weight }} kg</span>
+                      @elseif(($data['lastuser4']->weight/($data['lastuser4']->height * $data['lastuser4']->height)) > 0.0016)
                       <span class="badge bg-secondary">{{ $data['lastuser4']->weight }} kg</span>
+                      @else
+                      erreur
                       @endif
+
                 </td>
               </tr>
               </tbody>
