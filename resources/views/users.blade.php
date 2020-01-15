@@ -83,8 +83,22 @@
                 @endforeach
                 </tbody>
                 <tfoot>
+                
                 </tfoot>
-              </table></div></div>
+              </table>
+              
+              <div style="margin: 5px 5px;">
+                   <span class="badge bg-danger" style="margin-right: 2px; float: right;">Obésité</span> 
+                   <span class="badge bg-warning" style="margin-right: 2px; float: right;">Surpoids</span> 
+                  <span class="badge bg-success" style="margin-right: 2px; float: right;">Normal</span> 
+                  <span class="badge bg-primary" style="margin-right: 2px; float: right;">Maigre</span> 
+                  <span class="badge bg-secondary" style="margin-right: 2px; float: right;">Sous-nutrition</span> 
+              </div>
+              
+              </div>
+              
+              </div>
+              
             </div>
             <!-- /.card-body -->
 
@@ -94,7 +108,8 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          
+        
+        </div>
         <!-- /.card-footer-->
       </div>
     
