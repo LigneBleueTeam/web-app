@@ -51,16 +51,18 @@
                       {{ $user->height }} cm
                     </td>
                     <td>
-                      @if($user->weight > 95)
+                      @if( ($user->weight/($user->height * $user->height)) > 0.0035 )
                       <span class="badge bg-danger">{{ $user->weight }} kg</span>
-                      @elseif($user->weight > 85)
+                      @elseif( ($user->weight/($user->height * $user->height)) > 0.0030)
                       <span class="badge bg-warning">{{ $user->weight }} kg</span>
-                      @elseif($user->weight > 75)
-                      <span class="badge bg-primary">{{ $user->weight }} kg</span>
-                      @elseif($user->weight > 65)
+                      @elseif(($user->weight/($user->height * $user->height)) > 0.0023)
                       <span class="badge bg-success">{{ $user->weight }} kg</span>
-                      @elseif($user->weight < 65)
+                      @elseif(($user->weight/($user->height * $user->height)) > 0.0018)
+                      <span class="badge bg-primary">{{ $user->weight }} kg</span>
+                      @elseif(($user->weight/($user->height * $user->height)) > 0.0016)
                       <span class="badge bg-secondary">{{ $user->weight }} kg</span>
+                      @else
+                      erreur
                       @endif
                     </td>
                     <td>{{ $user->phoneNumber }}</td>
