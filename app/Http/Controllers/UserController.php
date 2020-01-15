@@ -17,7 +17,7 @@ class UserController extends Controller
         if ($request->session()->has('userId')) {
             $json = file_get_contents($GLOBALS['url_api'] . 'user/all');
             $data = json_decode($json);
-            return redirect()->route('users');
+            return view('users')->with('users', $data);
         } else{
             return redirect()->route('login');
         }
